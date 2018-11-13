@@ -1,0 +1,169 @@
+@import "vars"
+
+.header
+    &__top
+        padding: 38px 0
+        &__mmenu
+            display: none
+            overflow-x: hidden
+            &__burger
+                display: flex
+                padding: 15px
+                border: 1px solid $accent-r
+                span
+                    display: block
+                    background-color: $main-w
+                    height: 4px
+                    width: 50px
+                    border-radius: 2px
+                    margin: 20px 0
+                    &::after, &::before
+                        content: ''
+                        display: block
+                        background-color: $main-w
+                        height: 4px
+                        width: 50px
+                        border-radius: 2px
+                        position: relative
+                        transition: .3s ease
+                    &::after
+                        transform: rotate(0) translateY(-19px)
+                    &::before
+                        transform: rotate(0) translateY(15px)
+                        width: 25px
+            &__nav
+                padding-top: 120px
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -1
+                transform-origin: left
+                transform: translateX(-150%)
+                width: 100vw
+                transition: .5s ease
+                background-color: $main-w
+            &-active
+                .header__top__mmenu__burger
+                    span
+                        background-color: transparent
+                        &::after, &::before
+                            background-color: $main
+                            transform-origin: center
+                            top: -2px
+                        &::after
+                            transform: translateY(-2px) rotate(45deg)
+                            width: 50px
+                        &::before
+                            transform: translateY(2px) rotate(-45deg)
+                            width: 50px
+                .header__top__mmenu__nav
+                    transform: translateX(0)
+        &__btn1
+            a
+                font-size: 14px
+        &__instagram
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+            a
+                color: $main-w
+                font-size: 28px
+                text-decoration: none
+                transition: .3s ease
+                &:hover
+                    color: $accent-r                
+        &__menu
+            height: 100%
+            ul
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 0
+                margin: 0
+                height: 100%
+                li
+                    a
+                        color: #ffffff
+                        text-transform: uppercase
+                        letter-spacing: 1px
+                        font-size: 14px
+                        font-family: $font-medium
+                        position: relative
+                        &::after
+                            content: ''
+                            display: block
+                            background-color: $accent-r
+                            position: absolute
+                            bottom: -5px
+                            left: 0
+                            width: 0% 
+                            height: 1px
+                            transition: .3s ease
+                        &:hover
+                            text-decoration: none
+                            &::after
+                                width: 100%
+                        &.active
+                            &::after
+                                width: 100%
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .header
+        &__top
+            &__logo
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 100%
+                img
+                    max-width: 100%
+
+// ≥992px
++media-breakpoint-down(md)
+    .header
+        &__top
+            padding: 20px 0
+            display: flex
+            justify-content: space-between
+            &__logo
+                display: none
+            &__menu
+                display: none
+            &__instagram
+                display: none
+            &__mmenu
+                display: block
+            &__coll-none
+                width: auto
+                padding: 0
+            &__btn
+                a
+                    padding-left: 20px
+                    padding-right: 20px
+                    padding-top: 25px
+                    padding-bottom: 25px
+// ≥768px   
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

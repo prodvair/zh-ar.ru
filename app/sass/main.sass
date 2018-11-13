@@ -1,0 +1,102 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+::placeholder
+	color: $main
+
+::selection
+	background-color: $accent
+	color: $main
+
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $font
+	overflow-x: hidden
+	color: $main
+	background-color: $main
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: $accent-r
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.btn
+	background-color: rgba($accent-r, 0)
+	display: block
+	padding-top: 23px
+	padding-bottom: 23px
+	text-transform: uppercase
+	color: $main-w
+	border: 1px solid $accent-r
+	font-family: $font-medium
+	letter-spacing: 1px
+	position: relative
+	overflow: hidden
+	text-align: center
+	transition: .3s ease
+	&.black
+		color: $main
+	&-animation
+		&::after
+			content: ''
+			display: block
+			background-color: $accent-r
+			height: 100%
+			width: 20px
+			position: absolute
+			top: 0
+			left: 0
+			z-index: -1
+			animation: btn-animmation 7s infinite linear
+	&::before
+		content: ''
+		display: block
+		width: 200%
+		height: 200%
+		background-color: rgba($accent-r, 1)
+		border-radius: 50%
+		position: absolute
+		left: -50%
+		top: 100%
+		z-index: -1
+		transition: .3s ease
+	&:hover
+		color: $main-w
+		text-decoration: none
+		&::before
+			top: -50%
+
+@keyframes btn-animmation
+	0%
+		transform: translateX(-1000px)
+	30%
+		transform: translateX(-1000px) skewX(45deg)
+	70%
+		transform: translateX(1000px) skewX(45deg)
+	100%
+		transform: translateX(1000px)
+
+
+
+@import "header"
+
+@import "media" // Always at the end
