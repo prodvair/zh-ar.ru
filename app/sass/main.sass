@@ -59,14 +59,14 @@ b, strong
 		&::after
 			content: ''
 			display: block
-			background-color: $accent-r
+			background-color: rgba($main-w, 1)
 			height: 100%
-			width: 20px
+			width: 50px
 			position: absolute
 			top: 0
 			left: 0
 			z-index: -1
-			animation: btn-animmation 7s infinite linear
+			animation: btn-animmation 5s infinite linear
 	&::before
 		content: ''
 		display: block
@@ -84,6 +84,15 @@ b, strong
 		text-decoration: none
 		&::before
 			top: -50%
+
+@for $i from 1 through 20
+	$child: $i - 1  
+	.header__top__mmenu__nav ul li:nth-child( #{$i} )
+		& a::before
+			@if $i < 10
+				content: "0#{$i}"
+			@if $i >= 10
+				content: "#{$i}"
 
 @keyframes btn-animmation
 	0%
