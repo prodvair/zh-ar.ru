@@ -1,0 +1,105 @@
+@import "vars"
+
+.works
+    overflow: hidden
+    width: 100vw
+    &__slider
+        position: relative
+        width: 100%
+        &-left, &-right
+            position: absolute
+            top: 50%
+            transform: translateY(-100%)
+            margin-top: -50px
+            background-color: darken($gray, 30%)
+            width: 70px
+            height: 70px
+            text-align: center
+            line-height: 70px
+            font-size: 30px
+            cursor: pointer
+            z-index: 9
+            a
+                color: $accent-r
+                text-decoration: none
+            &:hover
+                background-color: $main-w
+        &-left
+            left: 0px
+        &-right
+            right: 0px
+        &__content
+            position: relative
+            width: 100vw
+            left: 50%
+            transform: translateX(-50%)
+            img
+                max-width: 1140px!important
+                margin-left: 53px
+            .slick-dots
+                display: flex
+                margin: 0
+                padding: 0
+                justify-content: center
+                list-style-type: none
+                margin-top: 100px
+                li
+                    margin: 0 13px
+                    cursor: pointer
+                    &::before
+                        display: block
+                        color: $main
+                        padding: 0 4px
+                    button
+                        visibility: hidden  
+                .slick-active
+                    &::before
+                        background-color: $main
+                        color: $main-w
+    &__bg
+        position: relative
+        z-index: 1
+        padding-top: 60px
+        padding-bottom: 30px
+        &::before, &::after
+            content: ''
+            background-color: $accent
+            display: block
+            position: absolute
+            top: 0
+            height: 100%
+            width: 100%
+            z-index: -1
+        &::after
+            width: 50vw
+            left: calc(-100% + 15px)
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

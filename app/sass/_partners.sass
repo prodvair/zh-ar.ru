@@ -1,0 +1,128 @@
+@import "vars"
+
+.partners
+    padding: 120px 0
+    &__slider
+        position: relative
+        margin-top: 140px
+        &-left, &-right
+            position: absolute
+            top: 50%
+            transform: translateY(-100%)
+            margin-top: -50px
+            background-color: darken($gray, 30%)
+            width: 70px
+            height: 70px
+            text-align: center
+            line-height: 70px
+            font-size: 30px
+            cursor: pointer
+            a
+                color: $accent-r
+                text-decoration: none
+            &:hover
+                background-color: $main-w
+        &-left
+            left: -100px
+        &-right
+            right: -100px
+        &__content
+            .slick-dots
+                display: flex
+                margin: 0
+                padding: 0
+                justify-content: center
+                list-style-type: none
+                margin-top: 100px
+                li
+                    margin: 0 13px
+                    cursor: pointer
+                    &::before
+                        display: block
+                        color: $main-w
+                        padding: 0 4px
+                    button
+                        visibility: hidden  
+                .slick-active
+                    &::before
+                        background-color: $accent
+                        color: $main
+                        font-family: $font
+            &__item
+                width: 180px
+                height: 180px
+                margin: 20px 0
+                &-img
+                    height: 70px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    img
+                        max-height: 70px
+                p
+                    text-align: center
+                    font-size: 18px
+                    line-height: 22px
+                    font-family: $font-open
+                    display: block
+                    margin-top: 20px
+                    padding: 0 30px
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width: 1366px)
+    .partners
+        &__slider
+            &-left
+                left: 10px
+            &-right
+                right: 10px
+            &__content
+                margin: 0 auto
+                max-width: 1000px
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .partners
+        &__slider
+            &-left
+                left: 0px
+            &-right
+                right: 0px
+            &__content
+                margin: 0 auto
+                max-width: 880px
+
+// ≥992px
++media-breakpoint-down(md)
+    .partners
+        h2
+            line-height: 70px
+        &__slider
+            display: none
+
+// ≥768px
++media-breakpoint-down(sm)
+    .partners
+        padding: 60px 0
+
+// ≥576px
++media-breakpoint-down(xs)
+    .partners
+        h2
+            line-height: 40px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

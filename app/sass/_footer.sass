@@ -1,0 +1,117 @@
+
+@import "vars"
+
+.footer
+    &__bottom
+        background-color: $accent
+        padding: 250px 0
+        text-align: center
+        font-family: $font-open
+        span
+            display: block
+            margin-top: 50px
+            font-size: 36px
+            color: $main
+            line-height: 38px
+        a
+            font-size: 36px
+            color: $main
+            display: block
+            text-decoration: underline
+            &:hover
+                color: $main
+                text-decoration: none
+    &__content
+        padding: 100px 0
+        border-top: 1px solid $gray
+        position: relative
+        &__copy
+            font-size: 18px
+            text-align: center
+            font-family: $font-open
+            a
+                display: block
+                text-decoration: underline
+                color: $accent_r
+                &:hover
+                    text-decoration: none
+                    color: $accent-r
+        &__soc
+            display: flex
+            justify-content: space-around
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            a
+                color: $gray
+                font-size: 22px
+                text-decoration: none
+                &:hover
+                    color: $accent-r
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .footer
+        &__bottom
+            span, a
+                font-size: 30px
+
+// ≥992px
++media-breakpoint-down(md)
+    .footer
+        &__bottom
+            padding: 200px 0
+            span, a
+                font-size: 28px
+                line-height: 30px
+        &__content
+            padding: 75px 0
+            &__soc
+                position: static
+                transform: none
+                margin-top: 30px
+                a
+                    font-size: 30px
+
+// ≥768px
++media-breakpoint-down(sm)
+    .footer
+        &__bottom
+            padding: 150px 0
+            span, a
+                font-size: 24px
+        &__content
+            padding: 50px 0
+            &__copy
+                font-size: 16px
+
+// ≥576px
++media-breakpoint-down(xs)
+    .footer
+        &__bottom
+            padding: 100px 0
+            span, a
+                font-size: 20px
+                line-height: 22px
+        &__content
+            &__copy
+                font-size: 14px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

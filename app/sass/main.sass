@@ -16,7 +16,7 @@ body
 	line-height: 1.65
 	font-family: $font
 	overflow-x: hidden
-	color: $main
+	color: $main-w
 	background-color: $main
 	input, textarea
 		border: #666 1px solid
@@ -38,6 +38,23 @@ body
 
 b, strong
 	font-weight: bold
+
+h2, h1
+	font-size: 72px
+	line-height: 85px
+	font-family: $font-bold
+	text-align: center
+	span
+		background-color: $accent
+		color: $main
+	&.black
+		color: $main	
+
+h1
+	line-height: 90px
+
+h2
+	font-size: 70px
 
 .btn
 	background-color: rgba($accent-r, 0)
@@ -94,6 +111,15 @@ b, strong
 			@if $i >= 10
 				content: "#{$i}"
 
+@for $i from 1 through 20
+	$child: $i - 1  
+	.slick-dots li:nth-child( #{$i} )
+		&::before
+			@if $i < 10
+				content: "0#{$i}"
+			@if $i >= 10
+				content: "#{$i}"
+
 @keyframes btn-animmation
 	0%
 		transform: translateX(-1000px)
@@ -104,8 +130,26 @@ b, strong
 	100%
 		transform: translateX(1000px)
 
+@keyframes arrow-down
+	0%
+		transform: translateX(-50%) translateY(-50px)
+		opacity: 0
+	45%
+		transform: translateX(-50%) translateY(0)
+		opacity: 1
+	80%
+		transform: translateX(-50%) translateY(10px)
+		opacity: 0.1
+	100%
+		transform: translateX(-50%) translateY(11px)
+		opacity: 0
 
+.elementToAnimate
+	
 
 @import "header"
+@import "partners"
+@import "works"
+@import "footer"
 
 @import "media" // Always at the end
