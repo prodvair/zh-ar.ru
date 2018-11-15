@@ -1,0 +1,123 @@
+@import "vars"
+
+.proposals
+    padding: 150px 0
+    &__content
+        &__quote
+            font-size: 36px
+            text-align: center
+            line-height: 38px
+            padding: 0 75px
+            margin-top: 50px
+            p
+                position: relative
+                z-index: 1
+                &::after, &::before
+                    content: ''
+                    display: block
+                    background-image: url('../img/icon/icon.png')
+                    height: 65px
+                    width: 98px
+                    position: absolute
+                    z-index: -1
+                &::after
+                    right: 10px
+                    bottom: -20px
+                    transform: rotate(180deg)
+                &::before
+                    left: 10px
+                    top: -20px
+        &__subtitle
+            margin: 20px 0
+            font-size: 36px
+            line-height: 38px
+            text-align: center
+        &__form
+            &__input
+                display: flex
+                input
+                    border: none
+                    height: 90px
+                &-tel
+                    margin: 0
+                    font-size: 48px
+                    padding: 0 20px
+                    width: 55%
+                &-submit
+                    margin: 0
+                    background-color: $accent-r
+                    color: $main-w
+                    font-family: $font-medium
+                    font-size: 24px
+                    width: 45%
+                    cursor: pointer
+                    letter-spacing: 1px
+                    transition: .3s ease
+                    &:hover
+                        color: $accent
+                        background-color: darken($accent-r, 5%)
+            &__desc
+                text-align: center
+                margin-top: 20px
+                p
+                    font-size: 18px
+                    line-height: 22px
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    .proposals
+        padding: 120px 0
+        &__content
+            &__quote
+                padding: 0
+            &__form
+                &__input
+                    display: block
+                    input
+                        width: 100%
+                    &-submit
+                        margin-top: 20px
+
+// ≥768px
++media-breakpoint-down(sm)
+    .proposals
+        &__content
+            &__quote
+                p
+                    &::after, &::before
+                        display: none
+
+// ≥576px
++media-breakpoint-down(xs)
+    .proposals
+        padding: 80px 0
+        &__content
+            &__quote
+                display: none
+            &__form
+                &__input
+                    &-tel
+                        font-size: 30px
+                    &-submit
+                        font-size: 18px
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

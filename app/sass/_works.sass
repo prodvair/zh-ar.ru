@@ -3,6 +3,9 @@
 .works
     overflow: hidden
     width: 100vw
+    h2
+        padding-top: 60px
+        padding-bottom: 30px
     &__slider
         position: relative
         width: 100%
@@ -10,7 +13,7 @@
             position: absolute
             top: 50%
             transform: translateY(-100%)
-            margin-top: -50px
+            margin-top: -40px
             background-color: darken($gray, 30%)
             width: 70px
             height: 70px
@@ -23,26 +26,26 @@
                 color: $accent-r
                 text-decoration: none
             &:hover
-                background-color: $main-w
+                background-color: $gray
         &-left
             left: 0px
         &-right
             right: 0px
         &__content
-            position: relative
             width: 100vw
-            left: 50%
+            margin-left: 50%
             transform: translateX(-50%)
             img
-                max-width: 1140px!important
-                margin-left: 53px
+                width: 1140px!important
+                margin: 0 30px
             .slick-dots
                 display: flex
                 margin: 0
                 padding: 0
                 justify-content: center
                 list-style-type: none
-                margin-top: 100px
+                margin-top: 50px
+                margin-bottom: 10px
                 li
                     margin: 0 13px
                     cursor: pointer
@@ -57,10 +60,11 @@
                         background-color: $main
                         color: $main-w
     &__bg
-        position: relative
-        z-index: 1
-        padding-top: 60px
-        padding-bottom: 30px
+        position: absolute
+        top: 0
+        z-index: -1
+        padding: 20px 0
+        width: 100%
         &::before, &::after
             content: ''
             background-color: $accent
@@ -71,7 +75,7 @@
             width: 100%
             z-index: -1
         &::after
-            width: 50vw
+            width: 65vw
             left: calc(-100% + 15px)
 
 
@@ -79,15 +83,47 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+    .works
+        &__slider
+            &-left, &-right
+                margin-top: -30px
+            &__content
+                img
+                    width: 960px!important
 
 // ≥992px
 +media-breakpoint-down(md)
+    .works
+        &__bg
+            width: 100vw
+            left: 50%
+            transform: translateX(-50%)
+        &__slider
+            &-left, &-right
+                margin-top: -20px
+            &__content
+                img
+                    width: 720px!important
 
 // ≥768px
 +media-breakpoint-down(sm)
+    .works
+        &__slider
+            &-left, &-right
+                margin-top: -10px
+            &__content
+                img
+                    width: 540px!important
 
 // ≥576px
 +media-breakpoint-down(xs)
+    .works
+        &__slider
+            &-left, &-right
+                display: none
+            &__content
+                img
+                    width: 100vw!important
 
 
 /*==========  Mobile First  ==========*/

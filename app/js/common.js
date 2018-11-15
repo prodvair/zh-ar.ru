@@ -1,9 +1,15 @@
 $(function() {
 
-	var width = $('.container').css('width');
-	console.log(width);
-	$('.works__slider').css({'width' : width});
-	$('.works__slider__content img').css({'width' : width});
+	resizeWindow();
+
+	$(window).on('resize', function(){
+		resizeWindow();
+	});
+
+	function resizeWindow() {
+		var height = $('.works').css('height');
+		$('.works__bg').css({'height' : height});
+	}
 
 	
 // Мобильное меню Start->
@@ -52,6 +58,8 @@ $(function() {
 		arrows: false,
 		dots: true,
 		rows: 2,
+		autoplay: true,
+		autoplaySpeed: 5000,
 		responsive: [
 			{
 			  breakpoint: 1367,
@@ -83,7 +91,54 @@ $(function() {
 
 // ===============================================================
 
-// Слайдер работ Start->
+// Слайдер Рекомендаций Start->
+
+$('.recomendation__slider__content').slick({
+	infinite: true,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	arrows: false,
+	dots: true,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	responsive: [
+		{
+			breakpoint: 1367,
+			settings: {
+				slidesToShow: 3
+			}
+		},
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2
+			}
+		},
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 1
+			}
+		}
+	]
+});
+
+$('.recomendation__slider-right').on('click', function (e) {
+	e.preventDefault();
+	$('.recomendation__slider__content').slick('slickNext');
+});
+
+$('.recomendation__slider-left').on('click', function (e) {
+	e.preventDefault();
+	$('.recomendation__slider__content').slick('slickPrev');
+});
+
+
+// <-End Слайдер Рекомендаций
+
+// ===============================================================
+
+// Слайдер Работ Start->
 
 $('.works__slider__content').slick({
 	infinite: true,
@@ -92,6 +147,11 @@ $('.works__slider__content').slick({
 	centerMode: true,
 	arrows: false,
 	dots: true,
+	useCSS: false,
+	useTransform: false,
+	variableWidth: true,
+	autoplay: true,
+	autoplaySpeed: 6000
 });
 
 $('.works__slider-right').on('click', function (e) {
@@ -104,10 +164,6 @@ $('.works__slider-left').on('click', function (e) {
 	$('.works__slider__content').slick('slickPrev');
 });
 
-
-// <-End Слайдер партнёры
-
-// ===============================================================
-
+// <-End Слайдер Работ
 
 });

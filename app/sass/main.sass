@@ -4,7 +4,7 @@
 
 
 ::placeholder
-	color: $main
+	color: $gray
 
 ::selection
 	background-color: $accent
@@ -56,6 +56,22 @@ h1
 h2
 	font-size: 70px
 
+h3
+	font-family: $font-bold
+	font-size: 24px
+	line-height: 28px
+	&::after
+		content: ''
+		display: block
+		background-color: $accent
+		height: 5px
+		width: 70px
+		margin-top: 3px
+
+.yellow
+	background-color: $accent
+	color: $main
+
 .btn
 	background-color: rgba($accent-r, 0)
 	display: block
@@ -70,6 +86,12 @@ h2
 	overflow: hidden
 	text-align: center
 	transition: .3s ease
+	&-text
+		height: 74px
+		padding: 0 15px
+		display: flex
+		align-items: center
+		justify-content: center
 	&.black
 		color: $main
 	&-animation
@@ -102,6 +124,10 @@ h2
 		&::before
 			top: -50%
 
+.posr
+	// position: relative
+	// height: 100%
+
 @for $i from 1 through 20
 	$child: $i - 1  
 	.header__top__mmenu__nav ul li:nth-child( #{$i} )
@@ -111,7 +137,7 @@ h2
 			@if $i >= 10
 				content: "#{$i}"
 
-@for $i from 1 through 20
+@for $i from 1 through 100
 	$child: $i - 1  
 	.slick-dots li:nth-child( #{$i} )
 		&::before
@@ -144,12 +170,13 @@ h2
 		transform: translateX(-50%) translateY(11px)
 		opacity: 0
 
-.elementToAnimate
-	
 
 @import "header"
 @import "partners"
 @import "works"
+@import "activity"
+@import "proposals"
+@import "recomendation"
 @import "footer"
 
 @import "media" // Always at the end

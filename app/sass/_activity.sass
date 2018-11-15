@@ -1,0 +1,86 @@
+@import "vars"
+
+.activity
+    padding-top: 120px
+    padding-bottom: 190px
+    .row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+    &__block
+        padding: 0 15px
+        padding-top: 100px
+        height: 100%
+        position: relative
+        margin-bottom: 104px
+        &__title
+            h3
+                display: inline-block
+                padding-left: 15px
+                width: calc(100% - 85px)
+                height: 100%
+                vertical-align: top
+            &-icon
+                display: inline-block
+                width: 70px
+                height: 70px
+                background-color: $accent
+                border-radius: 45px
+                position: relative
+                img
+                    max-width: 45px
+                    max-height: 45px
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+        &__text
+            margin-top: 40px
+            ul
+                margin: 0
+                padding: 0
+                list-style-type: none
+                li
+                    margin-bottom: 5px
+                    font-size: 20px
+        &__btn
+            position: absolute
+            bottom: 0
+            width: calc(100% - 30px)
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    .activity
+        padding-bottom: 150px
+        .row
+            grid-template-columns: 1fr 1fr
+
+// ≥768px
++media-breakpoint-down(sm)
+    .activity
+        padding-bottom: 120px
+        .row
+            grid-template-columns: 1fr
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
