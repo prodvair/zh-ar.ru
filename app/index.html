@@ -13,11 +13,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Template Basic Images Start -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#ffc40d">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Template Basic Images End -->
@@ -42,8 +43,8 @@
 					<a href="#" class="header__top__mmenu__burger"><span></span></a>
 					<nav class="header__top__mmenu__nav">
 						<ul>
-							<li><a href="#partners" class="active">Клиенты</a></li>
-							<li><a href="#works">Работы</a></li>
+							<!-- <li><a href="#partners" class="active">Клиенты</a></li> -->
+							<li><a href="#works" class="active">Работы</a></li>
 							<li><a href="#activity">Услуги</a></li>
 							<li><a href="#contacts">Котакты</a></li>
 						</ul>
@@ -192,30 +193,6 @@
 						</div>
 						<p>Яратель</p>
 					</div>
-					<div class="partners__slider__content__item">
-						<div class="partners__slider__content__item-img">
-							<img src="img/partners/1.png" alt="">
-						</div>
-						<p>Электронная торговая площадка</p>
-					</div>
-					<div class="partners__slider__content__item">
-						<div class="partners__slider__content__item-img">
-							<img src="img/partners/2.png" alt="">
-						</div>
-						<p>Электронная торговая площадка</p>
-					</div>
-					<div class="partners__slider__content__item">
-						<div class="partners__slider__content__item-img">
-							<img src="img/partners/3.png" alt="">
-						</div>
-						<p>Электронная торговая площадка</p>
-					</div>
-					<div class="partners__slider__content__item">
-						<div class="partners__slider__content__item-img">
-							<img src="img/partners/4.png" alt="">
-						</div>
-						<p>Электронная торговая площадка</p>
-					</div>
 				</div>
 				<div class="partners__slider-right"><a href="#" class="zh-ar-right-open-big"></a></div>
 			</div>
@@ -228,13 +205,39 @@
 				<div class="col-lg-8 posr">
 					<div class="works__bg"></div>
 				</div>
-				<h2 class="black">Примеры работы</h2>
+				<h2 class="black">Примеры работ
+					<div class="works__downloadPDF">
+						<a href="img/work/file/Zhukov & Archangelsky, презентация.pdf" download title="Скачать презентацию">
+							<img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNTg4LjYgNTg4LjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4OC42IDU4OC42OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTE2Mi42NDMsMjQ3LjUwM2MtNS43MTksMC4wODQtOS4zODQsMC42NTQtMTEuNTQ5LDEuMjEzdjc1Ljc3NGMyLjE2LDAuNTU0LDUuNjc0LDAuNjE3LDguODQ5LDAuNjggICBjMjMuMzgyLDAuNjIzLDM4LjkwOC0xMi40MTMsMzguOTA4LTQwLjY2NkMxOTkuMDE5LDI1OS45MzMsMTg0Ljg4NiwyNDcuMTY0LDE2Mi42NDMsMjQ3LjUwM3oiIGZpbGw9IiMyYTI5MjgiLz4KCTxwYXRoIGQ9Ik0zNTkuMDM2LDUzNy43OGMwLjc3MSwwLjA0MiwxLjU1MSwwLjExMSwyLjM0MiwwLjExMWgxNzguMmMyMC44NCwwLDM3LjgtMTYuOTYsMzcuOC0zNy44MDFWODYuOTk0ICAgYzAtMjAuODM4LTE2Ljk2LTM3LjgtMzcuOC0zNy44aC0xNzguMmMtMC43ODYsMC0xLjU3MSwwLjA3Ny0yLjM0MiwwLjExM1YwTDExLjIyMiw0Ni40MTd2NDk0LjU2NEwzNTkuMDM2LDU4OC42VjUzNy43OHogICAgTTUzOS41NzgsNTE2LjMwMWgtMTc4LjJjLTAuNzk3LDAtMS41NzEtMC4xMjctMi4zNDItMC4yNDJ2LTE2Mi4wOGMzNy4xMzEtNi40MTcsODguNjk0LTExLjI3NCwxMzMuMjkyLTAuNzk2bDUuMjc4LDEwLjIzNSAgIGMyMS4yODksNDAuMjUzLDQ0LjAyOCwzOS45ODksNTIuODEzLDM4LjAwNmMyLjAxNS0wLjQ1MywzLjEwMS0wLjk1OSwzLjEwMS0wLjk1OWwxLjE4Mi0wLjYyOGMwLjQtMC4yNTMsMC43MTItMC41NzUsMS4wNzUtMC44NDkgICB2MTAxLjExMkM1NTUuNzc3LDUwOS4wMjksNTQ4LjUxMSw1MTYuMzAxLDUzOS41NzgsNTE2LjMwMXogTTM3NC4xNSwzMzQuNzY4YzI3LjkwNi0zNC4wMzQsNTAuNDU2LTY1LjgwNyw2NC45NzktODcuMzI1ICAgbDAuMDUzLDAuMTE5bDAuMTU4LTAuMjQzYzExLjQwMSwyNC4wMzYsMzAuMTk2LDYxLjIxNCw0My4xMzcsODYuNTlsLTAuMDQyLTAuMDExbDAuNDQzLDAuODUgICBjLTM2Ljc5OC02LjI4Ni03Ni4zMTItMy45OTItMTA4LjgxMiwwLjUwMWwwLjQ3NS0wLjU1NEwzNzQuMTUsMzM0Ljc2OHogTTQzOS43OTQsMTc1Ljk1OGMxLjExOC0xLjk3MiwyLjc1My0yLjQ5NCw1LjY4NS0yLjM2NSAgIGMwLjA1MywwLjAwNSw1Ljg3NSwwLjM4Nyw4LjA0Nyw0LjM3NWMxLjMxOCwyLjM3NSwzLjIyOCw5LjkwOC03LjA0NSwyOC4yNzhoLTAuMDExYzAsMC0xLjMyOSwyLjIxLTMuODI4LDYuMTk5ICAgQzQzNi44ODMsMTkyLjIyMiw0MzcuMjYzLDE4MC40MTMsNDM5Ljc5NCwxNzUuOTU4eiBNNTE0LjEwNywzNTkuODEyYzEwLjU1Nyw0LjA2MSwyMC4wMzksOS4wNjUsMjguMzM5LDE0Ljk4MSAgIGMyLjM4NCwzLjM4Niw0LjU4OCw4LjI1OSw0LjE4OCwxMC41NThjLTAuMDIxLDAuMTExLTAuMDQyLDAuMjIyLTAuMTA1LDAuMzMyQzU0My4xMjEsMzg2LjMxMSw1MjkuNTY4LDM4Ni43MzMsNTE0LjEwNywzNTkuODEyeiAgICBNMzYxLjM3OCw3MC43OThoMTc4LjJjOC45MzMsMCwxNi4xOTksNy4yNywxNi4xOTksMTYuMnYyNzguNjE0Yy0wLjUwNi0wLjcyMy0wLjk0My0xLjMxOC0xLjIwMi0xLjY0bC0wLjY4Ni0wLjg4N2wtMC44OTYtMC42NjQgICBjLTEzLjgyNy0xMC4wOTQtMzAuNDkxLTE3Ljg3Mi00OS41ODEtMjMuMTI5Yy0xMy42MS0yNi41NzgtNDEuNzk3LTgxLjk3NC01My42NDYtMTA3LjkxNmM2Ljg2MS0xMC41NjgsMTAuNTQ3LTE2LjcyOCwxMC43MTYtMTcuMDEgICBjMTAuNjg5LTE5LjA1NiwxMy4wMjUtMzMuOTMyLDcuMTE0LTQ0LjQyNmMtNS4zNTgtOS40OTgtMTYuMDMxLTEyLjM1MS0yMS40ODQtMTIuNTMyYy04LjgxNy0wLjQwMS0xNi4zMzcsMy4zNy0yMC40MTksMTAuNTUyICAgYy02LjIyMywxMC45NjYtNC45MzYsMzAuMTc1LDMuODYsNTcuMDU2YzAuMzkxLDEuMjQyLDEuMDE4LDIuODM0LDEuODQ2LDQuODM4Yy0xNC4wOTEsMjEuMzEyLTM5LjY1Niw1OC4xNzQtNzIuMzY3LDk3Ljc2N1Y3MS4wMzYgICBDMzU5LjgwNyw3MC45MjIsMzYwLjU3Niw3MC43OTgsMzYxLjM3OCw3MC43OTh6IE0xMDAuMzExLDI5MC45NTdjLTguMjI0LDguMTU4LTIwLjMxMywxMS43MTgtMzQuMjY3LDExLjU5MSAgIGMtMy4wNjktMC4wMzEtNS44NDMtMC4yMjEtNy45ODYtMC41Njl2MzkuNjk4bC0yMi44NDItMC42MzNWMjMyLjY1OWM3LjA1Ni0xLjQ2OSwxNy4wNDEtMi42ODksMzEuMjkyLTMuMDM1ICAgYzE0LjU2Mi0wLjM1NiwyNS4xMDksMi40MDIsMzIuMjIxLDguMjc3YzYuODU4LDUuNTc5LDExLjQ4NSwxNC45NTgsMTEuNDg1LDI2LjA4NyAgIEMxMTAuMjE0LDI3NS4xMjgsMTA2LjY5NCwyODQuNTczLDEwMC4zMTEsMjkwLjk1N3ogTTIwNy41NDksMzMxLjcxNWMtMTIuMzM3LDEwLjA2Ni0zMC44ODEsMTQuNDU0LTUzLjEzNSwxMy44MzIgICBjLTEzLjExLTAuMzc1LTIyLjMwNy0xLjQ3Ny0yOC41MDYtMi41VjIzMC41NjNjOS4xNTItMS43NDMsMjEuMTg4LTIuODg4LDM0LjAzNS0zLjIwMWMyMS42NzYtMC41MywzNS45NTUsMy4xNTksNDcuMjcxLDExLjUzOCAgIGMxMi4yODcsOC45OCwyMC4wODQsMjMuNTk5LDIwLjA4NCw0NC43NDVDMjI3LjI5OCwzMDYuNTY2LDIxOC45NzcsMzIyLjIzMywyMDcuNTQ5LDMzMS43MTV6IE0yNDUuMjQ5LDIyNi4xOTRsNzYuODQyLTEuODM1djIzLjEwNiAgIGwtNDguODc3LDAuNzA5djI3Ljg5MWw0NS42MjgtMC4xMTN2MjIuODg0bC00NS42MjgtMC4zMTZ2NDkuMDk2bC0yNy45NzMtMC43NzF2LTEyMC42NUgyNDUuMjQ5eiIgZmlsbD0iIzJhMjkyOCIvPgoJPHBhdGggZD0iTTY3Ljc0NSwyNDguNjIyYy00Ljc3LDAuMDc0LTcuOTkyLDAuNjE0LTkuNjgzLDEuMTM5djMyLjc3N2MxLjk4LDAuNDk4LDQuNDM4LDAuNjY1LDcuODM0LDAuNjY1ICAgYzEyLjU1MSwwLjAxLDIwLjM2My02LjgzNywyMC4zNjMtMTguMzQ0Qzg2LjI2LDI1NC41MDYsNzkuNTM0LDI0OC40MzIsNjcuNzQ1LDI0OC42MjJ6IiBmaWxsPSIjMmEyOTI4Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+						</a>
+					</div>
+				</h2>
+				
+				<div class="col-lg-9 works__filter">
+					<ul>
+						<li><a href="#site" class="active" title="Уже выбран">Сайты</a></li>
+						<li><a href="#logos" title="">Логотипы</a></li>
+						<li><a href="#poligraf" title="">Полиграфия</a></li>
+						<li><a href="#present" title="">Презентации</a></li>
+						<!-- <li><a href="#instargam" title="">Instargam</a></li> -->
+					</ul>
+				</div>
 				<div class="works__slider">
 					<div class="works__slider-left"><a href="#" class="zh-ar-left-open-big"></a></div>
-					<div class="works__slider__content">
-						<img src="img/work/1.png" alt="">
-						<img src="img/work/2.png" alt="">
-						<img src="img/work/3.png" alt="">
+					<div class="works__slider__content" id="site">
+						<img src="" alt="">
+					</div>
+					<div class="works__slider__content" id="logos">
+						<img src="" alt="">
+					</div>
+					<div class="works__slider__content" id="poligraf">
+						<img src="" alt="">
+					</div>
+					<div class="works__slider__content" id="present">
+						<img src="" alt="">
+					</div>
+					<div class="works__slider__content" id="instargam">
+						<img src="" alt="">
 					</div>
 					<div class="works__slider-right"><a href="#" class="zh-ar-right-open-big"></a></div>
 				</div>
@@ -263,7 +266,7 @@
 						</ul>
 					</div>
 					<div class="activity__block__btn">
-						<a href="" class="btn btn-text">Закажите аудит сайта</a>
+						<a href="#proposals" class="btn btn-text">Закажите аудит сайта</a>
 					</div>
 				</div>
 
@@ -282,7 +285,7 @@
 						</ul>
 					</div>
 					<div class="activity__block__btn">
-						<a href="" class="btn btn-text">Закажите аудит рекламной кампании</a>
+						<a href="#proposals" class="btn btn-text">Закажите аудит рекламной кампании</a>
 					</div>
 				</div>
 				
@@ -304,7 +307,7 @@
 						</ul>
 					</div>
 					<div class="activity__block__btn">
-						<a href="" class="btn btn-text">Закажите аудит</a>
+						<a href="#proposals" class="btn btn-text">Закажите аудит</a>
 					</div>
 				</div>
 
@@ -327,7 +330,7 @@
 						</ul>
 					</div>
 					<div class="activity__block__btn">
-						<a href="" class="btn btn-text">Закажите email рассылку по базе клиентов</a>
+						<a href="#proposals" class="btn btn-text">Закажите email рассылку по базе клиентов</a>
 					</div>
 				</div>
 
@@ -348,7 +351,7 @@
 						</ul>
 					</div>
 					<div class="activity__block__btn">
-						<a href="" class="btn btn-text">Узнайте стоимость заявки с сайта</a>
+						<a href="#proposals" class="btn btn-text">Узнайте стоимость заявки с сайта</a>
 					</div>
 				</div>
 
@@ -369,7 +372,7 @@
 						</ul>
 					</div>
 					<div class="activity__block__btn">
-						<a href="" class="btn btn-text">Закажите презентацию компании</a>
+						<a href="#proposals" class="btn btn-text">Закажите презентацию компании</a>
 					</div>
 				</div>
 			</div>
@@ -384,9 +387,12 @@
 					<div class="proposals__content">
 						<div class="proposals__content__subtitle">Готовы к обсуждению вашего проекта.</div>
 						<form action="" class="proposals__content__form">
+								<input type="hidden" name="project_name" value="Жуков и Архангельский">
+								<input type="hidden" name="admin_email" value="manager@zh-ar.ru">
+								<input type="hidden" name="form_subject" value="Получите предложение и свежие идеи!">
 							<div class="proposals__content__form__text">Ваш номер телефона:</div>
 							<div class="proposals__content__form__input">
-								<input type="tel" class="proposals__content__form__input-tel" name="" id="" placeholder="+7 965 555 15 75">
+								<input type="tel" class="proposals__content__form__input-tel" name="Номер телефона" required id="" placeholder="+7 965 555 15 75">
 								<input type="submit" class="proposals__content__form__input-submit" value="Получить предложение">
 							</div>
 							<div class="proposals__content__form__desc">
@@ -413,25 +419,22 @@
 			<div class="row recomendation__slider">
 				<div class="recomendation__slider-left"><a href="#" class="zh-ar-left-open-big"></a></div>
 				<div class="col-xl-12 recomendation__slider__content">
-					<div class="recomendation__slider__content__item">
-						<img src="img/recomendation/1.png" alt="">
+					<div class="recomendation__slider__content__item" href="img/recomendation/1.jpg">
+						<img src="img/recomendation/1.jpg" alt="">
 					</div>
-					<div class="recomendation__slider__content__item">
-						<img src="img/recomendation/2.png" alt="">
+					<div class="recomendation__slider__content__item" href="img/recomendation/2.jpeg">
+						<img src="img/recomendation/2.jpeg" alt="">
 					</div>
-					<div class="recomendation__slider__content__item">
-						<img src="img/recomendation/3.png" alt="">
+					<div class="recomendation__slider__content__item" href="img/recomendation/3.jpg">
+						<img src="img/recomendation/3.jpg" alt="">
 					</div>
-					<div class="recomendation__slider__content__item">
-						<img src="img/recomendation/4.png" alt="">
-					</div>
-					<div class="recomendation__slider__content__item">
-						<img src="img/recomendation/1.png" alt="">
+					<div class="recomendation__slider__content__item" href="img/recomendation/4.jpg">
+						<img src="img/recomendation/4.jpg" alt="">
 					</div>
 				</div>
 				<div class="recomendation__slider-right"><a href="#" class="zh-ar-right-open-big"></a></div>
 			</div>
-			<div class="row recomendation__man">
+			<div class="row recomendation__man" id="contacts">
 				<div class="col-xl-9 col-lg-11 col-md-10 line"></div>
 				<div class="col-xl-3 col-md-4 col-sm-5 recomendation__man__image">
 					<img src="img/man.png" alt="">
@@ -446,7 +449,7 @@
 					<p>Любим свое дело, гордимся каждым проектом и верим в свой путь.</p>
 				</div>
 			</div>
-			<div class="row recomendation__information" id="contacts">
+			<div class="row recomendation__information">
 				<div class="col-lg-4">
 					<p>Время работы: 9.30 — 19.00 Суббота, воскресенье — выходные</p>
 					<p>Заявки получаем сразу, обрабатываем в течение одного рабочего дня.</p>
@@ -470,7 +473,7 @@
 		</div>
 	</section>
 	<!-- Контент -->
-
+	
 	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="row footer__content">
@@ -479,8 +482,8 @@
 					<a href="#">ООО  “Жуков и Архангельский” (Карта партнера)</a>
 				</div>
 				<div class="footer__content__soc col-lg-2">
-					<a href="#" class="zh-ar-vkontakte"></a>
-					<a href="#" class="zh-ar-facebook-official"></a>
+					<!-- <a href="https://vk.com/zharru" target="_blank" class="zh-ar-vkontakte"></a> -->
+					<!-- <a href="#" class="zh-ar-facebook-official"></a> -->
 					<a href="#" class="zh-ar-instagram-logo"></a>
 				</div>
 			</div>
@@ -494,6 +497,16 @@
 			</div>
 		</div>
 	</footer>
+
+	<section class="old-site yellow" id="old-site">
+		<div class="container">
+			<div class="row">
+				<div class="old-site__text">
+					Больше информаций на <a href="http://old.zh-ar.ru" target="_blank">основном сайте</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<script src="js/scripts.min.js"></script>
 
